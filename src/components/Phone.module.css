@@ -1,0 +1,64 @@
+.phoneContainer {
+  background-color: black;
+  height: 100%;
+}
+
+.numberScreen {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialpad {
+  height: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialpad .buttons {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(90, 86, 86, 0.795);
+  font-size: 18px;
+  border-radius: 50%;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 10px;
+}
+
+.dialpad .buttons p {
+  font-size: 8px;
+}
+
+.phoneBar {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1px;
+}
+
+.phoneBar .phoneBarButtons {
+  display: flex;
+  flex-direction: column;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  color: rgba(155, 148, 148, 0.795);
+  justify-content: center;
+  align-items: center;
+  margin: 5px 10px;
+}
+
+.phoneBar .phoneBarButtons p {
+  margin-top: 5px;
+  font-size: 8px;
+  font-weight: 500;
+}

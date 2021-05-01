@@ -1,0 +1,15 @@
+.aboutContainer {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.aboutContainer p {
+  margin: 2px;
+}

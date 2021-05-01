@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+
+import './App.css'
+import Bottom from './components/Bottom'
+import HomeScreen from './components/HomeScreen'
+import InfoBar from './components/InfoBar'
+import LockScreen from './components/LockScreen'
+import Top from './components/Top'
 
 function App() {
+  const [lock, setLock] = useState(true)
+  const [homeScreen, setHomeScreen] = useState('AppsList')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="phone">
+      <Top />
+      <div
+        className="lock-button"
+        onClick={() => {
+          setLock(true)
+        }}
+      ></div>
+      <div className="screen">
+        <InfoBar lock={lock} />
+        {/*<LockScreen lock={lock} />
+        <HomeScreen />*/}
+        {lock ? (
+          <LockScreen lock={lock} />
+        ) : (
+          <HomeScreen homeScreen={homeScreen} setHomeScreen={setHomeScreen} />
+        )}
+      </div>
+      <Bottom setLock={setLock} setHomeScreen={setHomeScreen} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
